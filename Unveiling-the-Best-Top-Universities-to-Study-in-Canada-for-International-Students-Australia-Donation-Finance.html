@@ -63,40 +63,16 @@ body{background-color:var(--base-2);color:var(--contrast);}a{color:var(--accent)
     googletag.enableServices();
   });
 </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134858135-1"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-
-      function randomScript() {
-        var script = document.querySelectorAll("script");
-        var count = Math.floor(Math.random() * (5 - 1 + 1) + 1);
-        var s = document.createElement("script");
-        var id = '';
-        s.type = "text/javascript";
-        console.log(count);
-        if(count  == 1){ 
-          s.src = "https://www.googletagmanager.com/gtag/js?id=UA-163888622-1";
-          id = 'UA-163888622-1';
-          }else if(count  == 2){
-            s.src = "https://www.googletagmanager.com/gtag/js?id=UA-103652698-12";
-            id = 'UA-103652698-12';
-        }if(count  == 3){
-            s.src = "https://www.googletagmanager.com/gtag/js?id=UA-103652698-12";
-            id = 'UA-103652698-12';
-        }if(count  == 4){
-            s.src = "https://www.googletagmanager.com/gtag/js?id=UA-103652698-12";
-            id = 'UA-103652698-12';
-        }if(count  == 5){
-            s.src = "https://www.googletagmanager.com/gtag/js?id=UA-103652698-12";
-            id = 'UA-103652698-12';
-        }
-        jQuery("head").append(s);    
-        jQuery('head').append("<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}gtag('js', new Date());  gtag('config', '"+id+"');<\/script>");
-      }
-      window.onload = randomScript;
-    
-    
-      </script>
-
+  gtag('config', 'UA-134858135-1');
+</script>
 	
 </head>
 
